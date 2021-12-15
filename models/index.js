@@ -12,7 +12,6 @@ Post.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-
 User.belongsToMany(Post, {
   through: Vote,
   as: 'voted_posts',
@@ -41,8 +40,4 @@ Post.hasMany(Vote, {
   foreignKey: 'post_id'
 });
 
-
-
 module.exports = { User, Post, Vote };
-
-
